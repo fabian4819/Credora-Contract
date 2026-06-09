@@ -31,6 +31,34 @@ SUBMIT_SCORE_TX=0x2d1f884d7dfa156880f2ea7d0831037d327add49417080203af35b3833fa4b
 SUBMIT_RANK_TX=0x1a0ddfccc6f6cb33f39b18bc4ecf92be746f998ed0f12814429493115ed6a9ef
 ```
 
+## Verification Status
+
+All deployed contracts are verified on Sourcify with `exact_match`.
+
+```txt
+AgentPassport: 0x40A9cB62D2a02189be10eC4657ae02B2c235174e
+SeasonManager: 0xC425c96B30BF8a9190E7A273D990a6a8B6F49C3b
+DecisionLogger: 0x2dFf6D5eB709b368df0c11bd80209eB92591658c
+OutcomeRegistry: 0x67479A2F63ecAc78fb52D696df7D7455e2347983
+ReputationEngine: 0xc84D1e8FECaDa44487242E5D855AEE7F752A12EA
+```
+
+Verification settings:
+
+```txt
+solc: 0.8.24
+optimizer: true
+optimizer_runs: 200
+verifier: sourcify
+chain: 5003
+```
+
+DecisionLogger constructor args:
+
+```txt
+0x00000000000000000000000040a9cb62d2a02189be10ec4657ae02b2c235174e
+```
+
 ## Explorer Links
 
 AgentPassport:
@@ -76,4 +104,3 @@ Decision outcome:
 ```txt
 getDecisionOutcome(1) = Success, roiBps=480, confidenceCalibration=94
 ```
-
